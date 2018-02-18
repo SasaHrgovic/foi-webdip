@@ -1,0 +1,63 @@
+
+.row::before,
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    position: relative;
+    float: left;
+}
+
+@media only screen and (min-width: 720px) {
+    /* For desktop: */
+    .col-1 {width: 8.33333%;}
+    .col-2 {width: 16.66666%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33333%;}
+    .col-5 {width: 41.66666%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33333%;}
+    .col-8 {width: 66.66666%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33333%;}
+    .col-11 {width: 91.66666%;}
+    .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 720px) {
+    /* For desktop: */
+    .col-1-off {left: 8.33333%;}
+    .col-2-off {left: 16.66666%;}
+    .col-3-off {left: 25%;}
+    .col-4-off {left: 33.33333%;}
+    .col-5-off {left: 41.66666%;}
+    .col-6-off {left: 50%;}
+    .col-7-off {left: 58.33333%;}
+    .col-8-off {left: 66.66666%;}
+    .col-9-off {left: 75%;}
+    .col-10-off {left: 83.33333%;}
+    .col-11-off {left: 91.66666%;}
+    .col-12-off {left: 100%;}
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        width: 960px;
+    }
+    .najava img {
+        max-width: 100%;
+        transition: all .2s ease-in-out;
+    }
+    .najava img:hover{
+        transform: scale(1.1);
+    }    
+}
+
+@media only screen and (min-width: 1920px) {
+    body {
+        width: 1366px;
+    }    
+}

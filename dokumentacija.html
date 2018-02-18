@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hr" dir="ltr">
+    <head>
+        <title>Dokumentacija</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Saša Hrgović"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/shrgovic2.css"/>
+        <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+        <link rel="stylesheet" type="text/css" href="css/grid.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="img/x-icon.png"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+        <script src="js/shrgovic2_jquery.js"></script>
+        <script src="js/user_nav.js"></script>
+        <script src="js/shrgovic.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="row header">
+                <a href="index.php"><img src="img/cinew.png" alt="cinew"></a>
+                <a href="#"><img src="img/fb-ico.png" alt="fb-ico"></a>
+                <a href="#"><img src="img/twitter-ico.png" alt="twitter-ico"></a>
+                <a href="#"><img src="img/yt-ico.png" alt="yt-ico"></a>
+            </div>
+            <button class="hamburger">&#9776;</button>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.php">Početna</a></li>
+                <li><a href="o_autoru.html">O autoru</a></li>
+                <li><a href="lokacije.php">Lokacije</a></li>
+                <li><a href="korisnik_filmovi.php">Filmovi</a></li>
+                <li><a href="dokumentacija.html">Dokumentacija</a></li>
+            </ul>
+        </nav>
+        <div class="row main">
+            <h1>Dokumentacija</h1>
+            <div class="col-10 dokumentacija">
+                <h3>Opis projektnog zadatka</h3>
+                <p>U projektnom zadatku trebalo je izraditi web aplikaciju koja predstavlja primjer sustava za upravljanje rezervacijama kino ulaznica. Obuhvaćen je cijeli proces rezerviranja ulaznica od samog kreiranja filmova i registracije korisnika pa do postavljanja ulaznica. U sustavu tako postoje tri vrste korisnika: registrirani korisnici, moderatori te administratori.<br> Uloga korisnika obuhvaća pregled dostupnih projekcija i rezerviranje mjesta, pregled odobrenih rezervacija te postavljanje ulaznica.<br> Uloga moderatora je da dodaje nove projekcije, rukovodi s rezervacijama na čekanju tako da ih odobri ili odbije i sl. Također može vidjeti i statistiku klikova 'sviđa mi se' i 'ne sviđa mi se' u obliku grafa.<br> Uloga administratora je da dodaje nove lokacije i dvorane, upravlja registrirani korisnicima te da može upravljati postavkama sustava. Također može pregledavati dnevnik kao i statistiku rada svih ili pojedinih korisnika. </p>
+                <h3>Opis projektnog rješenja</h3>
+                <p>Projektno rješenje u skladu je sa zahtjevima predstavljenima za izradu projekta. Svi dijelovi projekta izrađeni su bez korištenja 'frameworka'. Za dizajn korisničkog sučelja korišteni su HTML i CSS te u mnogim dijelovima projekta i Ajax kojim se generira HTML ili Canvas. Dizajn je odvojen od programske logike te je realiziran koristeći Smarty predloške. Osim dizajna, na korisničkoj strani postoji i programska logika ostvarena JavaScript i jQuery kodom.<br>Na strani poslužitelja korišten je PHP kojim se upravlja bazom podataka te generira XML kod koji se dohvaća putem Ajax-a. Također, na poslužiteljskoj strani se upravlja Smarty predlošcima na način da se odgovarajući predlošci koriste na odgovarajućoj stranici.</p>
+                <h3>ERA model</h3>
+                <a href="img/era.png" target="_blank"><img id="era_model" src="img/era.png" alt="era"></a>
+                <p></p>
+                <h3>Popis i opis skripti, mapa mjesta i navigacijski dijagram</h3>
+                <h4>Popis skripti</h4>
+                <table>
+                    <thead><th>Skripta</th><th>Opis</th></thead> 
+                    <tbody>
+                        <tr><td>index.php</td><td>Početna stranica sustava</td></tr>
+                        <tr><td>korisnik.php</td><td>Generira XML za provjeru korisničkog imena prilikom registracije</td></tr>
+                        <tr><td>korisnik_filmovi.php</td><td>Omogućuje pregled svih filmova u bazi te njihovo ovjenjivanje</td></tr>
+                        <tr><td>korisnik_odobreno.php</td><td>Popis odobrenih rezervacija za korisnika</td></tr>
+                        <tr><td>korisnik_rezervacije.php</td><td>Rezervacija mjesta za odabranu projekciju</td></tr>
+                        <tr><td>lokacije.php</td><td>Skripta za prikaz lokacija na Google kartama</td></tr>
+                        <tr><td>moderator_filmovi.php</td><td>Stranica za dodavanje, ažuriranje i brisanje filmova</td></tr>
+                        <tr><td>moderator_projekcije.php</td><td>Stranica za dodavanje i ažuriranje projekcija te definiranje njihovih termina</td></tr>
+                        <tr><td>moderator_rezervacije.php</td><td>Pregled rezervacija na čekanju te njihovo odobravanje ili odbijanje. Korisniku se šalje mail s potvrdom.</td></tr>
+                        <tr><td>moderator_statistika.php</td><td>Statistički prikaz klikova 'sviđa mi se' i 'ne sviđa mi se'</td></tr>
+                        <tr><td>moderator_ulaznice.php</td><td>Pregled korisnika koji su postavili ulaznicu za odabranu projekciju</td></tr>
+                        <tr><td>obavijesti.php</td><td>Stranica za prikaz obavijesti ili grešaka</td></tr>
+                        <tr><td>panel.php</td><td>Stranica za prikaz navigacijskog izbornika odnosno njegovih elemenata</td></tr>
+                        <tr><td>registration.php</td><td>Stranica za registraciju korisnika</td></tr>
+                        <tr><td>prijava.php</td><td>Stranica za prijavu korisnika</td></tr>
+                        <tr><td>upload.php</td><td>Skripta za upload datoteke</td></tr>
+                        <tr><td>vrijeme_pomak.php</td><td>Skripta za upravljanje vremenskim pomakom</td></tr>
+                        <tr><td>admin_dvorane.php</td><td>Stranica za upravljanje dvoranama</td></tr>
+                        <tr><td>admin_dnevnik.php</td><td>Stranica za pregled dnevnika</td></tr>
+                        <tr><td>admin_korisnici.php</td><td>Stranica za pregled i upravljanje korisnicima</td></tr>
+                        <tr><td>admin_lokacije.php</td><td>Stranica za upravljanje lokacijama</td></tr>
+                        <tr><td>admin_postavke.php</td><td>Stranica za upravljanje postavkama sustava</td></tr>
+                        <tr><td>admin_statistika.php</td><td>Stranica za pregled statistike korištenja</td></tr>
+                        <tr><td>aktivacija.php</td><td>Skripta za aktivaciju korisnika</td></tr>
+                        <tr><td>aplikacijski_okvir.php</td><td>Skripta koja obuhvaća rad s bazom, sesijama i smarty predlošcima</td></tr>
+                        <tr><td>baza.class.php</td><td>Skripta za upravljanje bazom podataka</td></tr>
+                        <tr><td>crud_admin_stat.php</td><td>Generiranje XML-a za statistiku</td></tr>
+                        <tr><td>crud_dnevnik.php</td><td>Generiranje XML-a za dnevnik</td></tr>
+                        <tr><td>crud_dvorane.php</td><td>Generiranje XML-a za dvorane te upravljanje dvoranama</td></tr>
+                        <tr><td>crud_filmovi.php</td><td>Generiranje XML-a za prikaz filmova + upravljanje filmovima</td></tr>
+                        <tr><td>crud_korisnici.php</td><td>Generiranje XML-a za prikaz korisnika + upravljanje korisnicima</td></tr>
+                        <tr><td>crud_lokacije.php</td><td>Generiranje XML-a za prikaz lokacija + upravljanje lokacijama</td></tr>
+                        <tr><td>crud_moderator_stat.php</td><td>Generiranje XML-a za statistiku</td></tr>
+                        <tr><td>crud_odobreno.php</td><td>XML za prikaz odobrenih rezervacija</td></tr>
+                        <tr><td>crud_projekcije.php</td><td>XML za projekcije i upravljanje projekcijama</td></tr>
+                        <tr><td>crud_rezervacije.php</td><td>XML za rezervacije i upravljanje rezervacijama</td></tr>
+                        <tr><td>crud_sjedala.php</td><td>XML za prikaz dvorana</td></tr>
+                        <tr><td>xml_drzave.php</td><td>Lista država</td></tr>
+                        <tr><td>xml_dvorane.php</td><td>Popis dvorana</td></tr>
+                        <tr><td>xml_filmovi.php</td><td>Popis filmova</td></tr>
+                        <tr><td>xml_filmovi_ocjene.php</td><td>Ocjene filmova</td></tr>
+                        <tr><td>xml_index.php</td><td>Lista prve 3 projekcije na početnoj stranici</td></tr>
+                        <tr><td>xml_korisnici.php</td><td>Popis korisnika</td></tr>
+                        <tr><td>xml_lokacije.php</td><td>Popis lokacija</td></tr>
+                        <tr><td>xml_projekcije.php</td><td>Popis projekcija</td></tr>
+                        <tr><td>xml_radnje.php</td><td>Popis radnji</td></tr>
+                        <tr><td>xml_razlika.php</td><td>Vremenska razlika</td></tr>
+                        <tr><td>xml_tip_korisnika.php</td><td>Popis tipova korisnika</td></tr>
+                        <tr><td>xml_tip_radnje.php</td><td>Popis tipova radnji</td></tr>
+                        <tr><td>xml_ulaznice.php</td><td>Popis ulaznica</td></tr>
+                        <tr><td>xml_zanrovi.php</td><td>Popis žanrova</td></tr>
+                    </tbody> 
+                </table>
+                <h4>Mapa mjesta</h4>
+                <ul id="mapa_mjesta">
+                    <li><a href="index.php">Početna</a></li>
+                    <li><a href="o_autoru.html">O autoru</a></li>
+                    <li><a href="lokacije.php">Lokacije</a></li>
+                    <li><a href="korisnik_filmovi.php">Filmovi</a></li>
+                    <li><a href="dokumentacija.html">Dokumentacija</a></li>
+                    <li><a href="prijava.php">Prijava</a></li>
+                    <li><a href="registration.php">Registracija</a></li>
+                    <li><a href="privatno/korisnici.php">Ispis korisnika</a></li>
+                    <li><p>Korisnički panel</p></li>
+                    <ul>
+                        <li><a href="korisnik_rezervacije.php">Rezerviraj</a></li>
+                        <li><a href="korisnik_odobreno.php">Moje rezervacije</a></li>
+                        <li><a href="#">Korisnik ulaznice</a></li>
+                    </ul>
+                    <li><p>Moderator panel</p></li>
+                    <ul>
+                        <li><a href="moderator_filmovi.php">Filmovi</a></li>
+                        <li><a href="moderator_projekcije.php">Termini prikazivanja</a></li>
+                        <li><a href="moderator_rezervacije.php">Rezervacije</a></li>
+                        <li><a href="moderator_ulaznice.php">Ulaznice</a></li>
+                        <li><a href="moderator_statistika.php">Statistika</a></li>
+                    </ul>
+                    <li><p>Admin panel</p></li>
+                    <ul>
+                        <li><a href="admin_lokacije.php">Lokacije</a></li>
+                        <li><a href="admin_dvorane.php">Dvorane</a></li>
+                        <li><a href="admin_korisnici.php">Korisnici</a></li>
+                        <li><a href="admin_statistika.php">Statistika</a></li>
+                        <li><a href="admin_dnevnik.php">Dnevnik</a></li>
+                        <li><a href="admin_postavke.php">Postavke</a></li>
+                    </ul>
+                </ul>
+                <h4>Navigacijski dijagram</h4>
+                 <a href="img/navigacijski.png" target="_blank"><img id="era_model" src="img/navigacijski.png" alt="nav"></a>
+                 <h3>Korištene tehnologije i alati</h3>
+                <table>
+                <thead><th>Alat/tehnologija</th><th>Opis</th></thead> 
+                <tbody>
+                    <tr><td>Visual Studio Code</td><td>Korišten za izradu svih dijelova projekta</td></tr>
+                    <tr><td>FTPSync</td><td>Dodatak za VS Code za sinkronizaciju s poslužiteljem</td></tr>
+                    <tr><td>Smarty plugin</td><td>Dodatak za CS Code za podršku za Smarty</td></tr>
+                    <tr><td>MySQL Workbench</td><td>Za izradu ERA dijagrama</td></tr>
+                    <tr><td>PHP</td><td>Programski jezik korišten na strani poslužitelja</td></tr>
+                    <tr><td>JavaScript</td><td>Korišten na strani klijenta</td></tr>
+                    <tr><td>jQuery</td><td>Korišten na strani klijenta</td></tr>
+                    <tr><td>Smarty</td><td>Korišten za dizajn</td></tr>
+                    <tr><td>HTML i CSS</td><td>Dizajn i struktura</td></tr>
+                    <tr><td>XML</td><td>Za potrebe korištenja Ajax-a</td></tr>
+                </tbody>
+                </table>
+                 <h3>Tuđi moduli</h3>
+                <table>
+                <thead><th>Modul</th><th>Opis</th></thead> 
+                <tbody>
+                    <tr><td>Google Analytics</td><td>Statistika web mjesta</td></tr>
+                    <tr><td>Google maps</td><td>Google karte</td></tr>
+                    <tr><td>jQuery</td><td>Korišten u cijelom projektu</td></tr>
+                    <tr><td>PHP QR Code</td><td>Za generiranje ulaznica</td></tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <div class = "row">
+                <div class = "col-8">
+                    <p>Copyright &copy; Saša Hrgović, Fakultet organizacije i informatike</p><br/>
+                    <a href="http://barka.foi.hr/WebDiP/2015_projekti/WebDiP2015x030/privatno/korisnici.php">Ispis korisnika</a>
+                </div>
+                <div class = "col-4">
+                    <a href="#">
+                        <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png" alt="CSS3 Validirano" id="cssv"/>
+                    </a>
+                    <a href="#">
+                        <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5 Validirano" id="htmlv"/>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "remotePath": "/var/www/WebDiP/2015_projekti/WebDiP2015x030",
+    "host": "barka.foi.hr",
+    "username": "shrgovic2",
+    "password": "nrp83etr",
+    "port": 22,
+    "protocol": "sftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\uploads",
+        "\\templates_c",
+        "\\img",
+        "\\ulaznice"
+    ]
+}

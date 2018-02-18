@@ -1,0 +1,96 @@
+/*samsungGS3_landscape*/
+@media only screen and (max-width: 1280px) and (min-width: 1136px){
+    /*.main{
+        background-color: burlywood;
+    }*/
+}
+
+/*iphone5_landscape*/
+@media only screen and (max-width: 1136px) and (min-width: 721px){
+    /*.main{
+        background-color: purple;
+    }*/
+}
+
+/*samsungGS3_portrait*/
+@media only screen and (max-width: 720px){
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    body {
+        background-image: none;
+    }
+
+    /* NAVIGACIJA */
+
+    header a + a {
+        display: none;
+    }
+
+    .user_nav, .menu {
+        height: 100%;
+        max-height: max-content;
+    }
+
+    .user_nav li, .menu li {
+        float: none;
+    }
+
+    .menu li + li + li + li + li {
+    	float: none;
+    }
+    /* HAMBI */
+    .hamburger, .hamburger_user{
+        background:none;
+        position:absolute;
+        right:0;
+        line-height:45px;
+        padding:10px 15px 0px 15px;
+        color:#fff;
+        border:0;
+        font-size:1.4em;
+        font-weight:bold;
+        cursor:pointer;
+        outline:none;
+    }
+    .hamburger {
+        top:0;
+    }
+
+    .hamburger_user {
+        top: 50px;
+    }
+    
+    .user_nav, .menu{font-weight:bold; font-size:0.8em; width:100%; background:#131313; position: absolute; text-align:center;}
+    .user_nav ul, .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+    .user_nav li, .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+    .user_nav li:hover, .menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+    .user_nav ul li a, .menu ul li a { text-decoration:none;  margin: 0px; color:#fff;}
+    .user_nav ul li a:hover, .menu ul li a:hover {  color: #fff; text-decoration:none;}
+    .user_nav a, .menu a{text-decoration:none; color:white;}
+    .user_nav a:hover, .menu a:hover{text-decoration:none; color:white;}
+    .menu {z-index: 11; }
+    .user_nav {z-index: 10;}
+    
+    .natpis {
+        display: block;
+    }
+
+    .korisnik_natpis {
+        display: block;
+    }
+}
+
+/*iphone5_portrait*/
+@media only screen and (max-width: 640px) and (min-width: 481px){
+}
+
+/*iPhone3_landscape*/
+@media only screen and (min-width: 320px) and (max-width: 480px){
+
+}
+
+/*iPhone3_portrait*/
+@media only screen and (max-width: 320px){
+}

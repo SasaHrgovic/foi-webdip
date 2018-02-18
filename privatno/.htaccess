@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Ispis korisnika"
+AuthUserFile /var/www/WebDiP/2015_projekti/WebDiP2015x030/privatno/.htpasswd
+Require valid-user
